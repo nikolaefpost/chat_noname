@@ -9,14 +9,13 @@ import {IAppWrapper} from "../types";
 const cookies = new Cookies();
 
 const AppWrapper: React.FC<IAppWrapper> = ({children, isAuth, setIsAuth, setIsInChat}) => {
-
+    console.log("AppWrapper")
     const signUserOut = async () => {
         await signOut(auth);
         cookies.remove("auth-token");
         setIsAuth(false);
         setIsInChat(false);
     };
-    console.log(auth.currentUser)
     return (
         <div className={styles.app}>
             <div className={styles.app_header}>
