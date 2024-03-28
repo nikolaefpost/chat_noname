@@ -1,10 +1,10 @@
 
 import { initializeApp } from "firebase/app";
-import {getAuth, GoogleAuthProvider} from 'firebase/auth';
+import {getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
+    apiKey: import.meta.env.VITE_REACT_APP_API_KEY,
     authDomain: "chat-5a4ff.firebaseapp.com",
     projectId: "chat-5a4ff",
     storageBucket: "chat-5a4ff.appspot.com",
